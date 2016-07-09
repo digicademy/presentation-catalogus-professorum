@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>TITLE</title>
+    <title>Deutsche Professorenkataloge. Perspektiven, Potentiale und Möglichkeiten zur Interoperabilität</title>
 
     <!-- meta information -->
-    <meta name="author" content="AUTHOR" />
+    <meta name="author" content="Torsten Schrade" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=1024" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -65,14 +65,14 @@
     <div id="impress">
 
         <div class="step">
-            <h4>Date | Location</h4>
+            <h4>12.07.2016 | Universität Mainz | Expertenworkshop Professorenkataloge</h4>
 
-            <h1>TITLE</h1>
+            <h1>Deutsche Professorenkataloge</h1>
 
-            <h2 class="red">Subtitle</h2>
+            <h2 class="red">Perspektiven, Potentiale und Möglichkeiten zur Interoperabilität</h2>
 
             <h5 class="byline">
-                <strong>Author | Download:
+                <strong><a href="https://orcid.org/0000-0002-0953-2818">Torsten Schrade</a> | <a href="http://www.adwmainz.de/">Akademie Mainz</a> | Slides:
                     <a href="#" title="Download the presentation">
                         Link
                     </a>
@@ -103,13 +103,105 @@
         </div>
 
         <div class="step">
-            <h2>Title</h2>
+            <h2>Matrix Interoperabilitätskriterien</h2>
             <div class="row">
-                <div class="six columns">
-                    <h3>Left six columns</h3>
-                </div>
-                <div class="six columns">
-                    <h3>Right six columns</h3>
+                <div class="twelfe columns">
+                    <table id="api-comparison">
+                        <thead>
+                            <tr>
+                                <th>Kriterium / API</th>
+                                <th class="halle"><a href="http://www.catalogus-professorum-halensis.de/">Halle</a></th>
+                                <th class="helmstedt"><a href="http://uni-helmstedt.hab.de/index.php?cPage=5&amp;sPage=prof&amp;wWidth=1280&amp;wHeight=855">Helmstedt</a></th>
+                                <th class="kiel"><a href="http://gelehrtenverzeichnis.de/">Kiel</a></th>
+                                <th class="leipzig"><a href="http://www.uni-leipzig.de/unigeschichte/professorenkatalog/">Leipzig</a></th>
+                                <th class="mainz"><a href="http://gutenberg-biographics.ub.uni-mainz.de/">Mainz</a></th>
+                                <th class="rostock"><a href="http://cpr.uni-rostock.de/">Rostock</a></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th class="api"><a href="https://de.wikipedia.org/wiki/Wikipedia:BEACON">GND BEACON</a></th>
+                                <td class="halle"><a href="http://www.historische-kommission-muenchen-editionen.de/beacond/cph.php?beacon">(ja)</a></td>
+                                <td class="helmstedt"><a href="http://uni-helmstedt.hab.de/beacon.php">ja</a></td>
+                                <td class="kiel">-</td>
+                                <td class="leipzig"><a href="http://www.uni-leipzig.de/unigeschichte/professorenkatalog/leipzig/cpl-beacon.txt">ja</a></td>
+                                <td class="mainz"><a href="http://gutenberg-biographics.ub.uni-mainz.de/gnd/personen/beacon/file.txt">ja</a></td>
+                                <td class="rostock"><a href="http://cpr.uni-rostock.de/cpr_pnd_beacon.txt">ja</a></td>
+                            </tr>
+                            <tr>
+                                <th class="api"><a href="https://de.wikipedia.org/wiki/Identifikator#Persistenz">PID/Permalink</a></th>
+                                <td class="halle"></td>
+                                <td class="helmstedt"></td>
+                                <td class="kiel"><a href="http://gelehrtenverzeichnis.de/e3ef2ef9-2424-c175-bc4f-4d4c606410fa">ja</a></td>
+                                <td class="leipzig"></td>
+                                <td class="mainz"><a href="http://gutenberg-biographics.ub.uni-mainz.de/id/a85352e5-1ead-4a6f-8e27-276f94cd2867">ja</a></td>
+                                <td class="rostock"></td>
+                            </tr>
+                            <tr>
+                                <th class="api"><a href="http://webdoc.sub.gwdg.de/pub/mon/dariah-de/dwp-2014-6.pdf">Forschungsdatenlizenz</a></th>
+                                <td class="halle"></td>
+                                <td class="helmstedt"></td>
+                                <td class="kiel">-</td>
+                                <td class="leipzig"></td>
+                                <td class="mainz"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+                                <td class="rostock"></td>
+                            </tr>
+                            <tr>
+                                <th class="api"><a href="http://www.tei-c.org/index.xml">TEI/XML</a></th>
+                                <td class="halle"></td>
+                                <td class="helmstedt"></td>
+                                <td class="kiel"></td>
+                                <td class="leipzig"></td>
+                                <td class="mainz"></td>
+                                <td class="rostock"></td>
+                            </tr>
+                            <tr>
+                                <th class="api"><a href="https://www.openarchives.org/pmh/">OAI-PMH</a></th>
+                                <td class="halle"></td>
+                                <td class="helmstedt"></td>
+                                <td class="kiel"></td>
+                                <td class="leipzig"></td>
+                                <td class="mainz"></td>
+                                <td class="rostock"></td>
+                            </tr>
+                            <tr>
+                                <th class="api"><a href="https://de.wikipedia.org/wiki/Search/Retrieve_via_URL">SRU</a></th>
+                                <td class="halle"></td>
+                                <td class="helmstedt"></td>
+                                <td class="kiel"></td>
+                                <td class="leipzig"></td>
+                                <td class="mainz"></td>
+                                <td class="rostock"></td>
+                            </tr>
+                            <tr>
+                                <th class="api"><a href="http://www.opensearch.org/Home">Open Search</a></th>
+                                <td class="halle"></td>
+                                <td class="helmstedt"></td>
+                                <td class="kiel"></td>
+                                <td class="leipzig"></td>
+                                <td class="mainz"></td>
+                                <td class="rostock"></td>
+                            </tr>
+                            <tr>
+                                <th class="api"><a href="http://schema.org/">schema.org</a></th>
+                                <td class="halle"></td>
+                                <td class="helmstedt"></td>
+                                <td class="kiel">(ja)</td>
+                                <td class="leipzig"></td>
+                                <td class="mainz"></td>
+                                <td class="rostock"></td>
+                            </tr>
+                            <tr>
+                                <th class="api"><a href="https://de.wikipedia.org/wiki/Linked_Open_Data">LOD</a></th>
+                                <td class="halle"></td>
+                                <td class="helmstedt"></td>
+                                <td class="kiel"><a href="http://www.gelehrtenverzeichnis.de/data/about/e3ef2ef9-2424-c175-bc4f-4d4c606410fa">ja</a></td>
+                                <td class="leipzig"></td>
+                                <td class="mainz"></td>
+                                <td class="rostock"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
