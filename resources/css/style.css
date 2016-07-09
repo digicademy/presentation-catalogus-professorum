@@ -217,6 +217,7 @@ p {
 }
 
 ol {
+	counter-reset: section;
 	margin: 20px 0 20px 70px;
 }
 
@@ -249,6 +250,14 @@ ul li:before {
 
 ol li:before {
 	content: counters(section,".")". ";
+}
+
+ol ol {
+	margin-left: 52px;
+}
+
+ol ol li:before {
+	left: -50px;
 }
 
 span, strong {
@@ -410,14 +419,19 @@ STYLES FOR SPECIFIC SLIDES
 */
 
 #api-comparison {
-	font-size: 18px;
+	font-size: 16px;
+	border-collapse: collapse;
+	border: none;
 }
 
 #api-comparison th,
 #api-comparison td {
-	line-height: 24px;
+	line-height: 16px;
+	border: none;
 }
 
-#api-comparison td {
-	text-align: center;
+#api-comparison .category {
+	background: #CCC;
+	font-weight: bold;
+	padding-left: 8px;
 }

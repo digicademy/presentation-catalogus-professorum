@@ -65,7 +65,7 @@
     <div id="impress">
 
         <div class="step">
-            <h4>12.07.2016 | Universität Mainz | Expertenworkshop Professorenkataloge</h4>
+            <h4>12.07.2016 | Universität Mainz | Expertenworkshop</h4>
 
             <h1>Deutsche Professorenkataloge</h1>
 
@@ -81,16 +81,22 @@
         </div>
 
         <div class="step">
-            <h2>Table of Contents</h2>
+            <h2>Gliederung</h2>
             <ol>
                 <li>
-                    One
+                    Definitionen und Grundlagen
                 </li>
                 <li>
-                    Two
+                    Ebenen von Interoperabilität
+                    <ol>
+                        <li>Adressierung von Ressourcen</li>
+                        <li>Offene Schnittstellen</li>
+                        <li>Austauschformate</li>
+                        <li>Nachnutzung der Daten</li>
+                    </ol>
                 </li>
                 <li>
-                    Three
+                    Interoperabilitäts-Matrix
                 </li>
             </ol>
         </div>
@@ -98,18 +104,43 @@
         <div class="step">
             <h1 class="red">01</h1>
             <h2 class="line-height-one-five">
-                Chapter
+                Definition und Grundlagen
             </h2>
         </div>
 
         <div class="step">
-            <h2>Matrix Interoperabilitätskriterien</h2>
+            <h2>Interoperabilität</h2>
             <div class="row">
                 <div class="twelfe columns">
+                    <a href="http://nbn-resolving.de/urn:nbn:de:gbv:7-dariah-2014-1-0">
+                        Beer u.a.: Interdisciplinary Interoperability. DARIAH-DE Working Papers Nr. 3. Göttingen: DARIAH-DE, 2014. URN: urn:nbn:de:gbv:7-dariah-2014-1-0.
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="step">
+            <h1 class="red">02</h1>
+            <h2 class="line-height-one-five">
+                Ebenen von Interoperabilität
+            </h2>
+        </div>
+
+        <div class="step">
+            <h1 class="red">03</h1>
+            <h2 class="line-height-one-five">
+                Interoperabilitäts-Matrix
+            </h2>
+        </div>
+
+        <div class="step">
+            <div class="row">
+                <div class="twelfe columns">
+                    <h2>Merkmale im Vergleich</h2>
                     <table id="api-comparison">
                         <thead>
                             <tr>
-                                <th>Kriterium / API</th>
+                                <th></th>
                                 <th class="halle"><a href="http://www.catalogus-professorum-halensis.de/">Halle</a></th>
                                 <th class="helmstedt"><a href="http://uni-helmstedt.hab.de/index.php?cPage=5&amp;sPage=prof&amp;wWidth=1280&amp;wHeight=855">Helmstedt</a></th>
                                 <th class="kiel"><a href="http://gelehrtenverzeichnis.de/">Kiel</a></th>
@@ -120,6 +151,18 @@
                         </thead>
                         <tbody>
                             <tr>
+                                <td class="category" colspan="7">Adressierung von Ressourcen</td>
+                            </tr>
+                            <tr>
+                                <th class="api"><a href="https://de.wikipedia.org/wiki/Identifikator#Persistenz">PID/Permalink</a></th>
+                                <td class="halle"><a href="http://www.catalogus-professorum-halensis.de/buddenbrockhetterdorf.html">(ja)</a></td>
+                                <td class="helmstedt">-</td>
+                                <td class="kiel"><a href="http://gelehrtenverzeichnis.de/43f48f74-8573-170b-6432-4d4c60d489d9">ja</a></td>
+                                <td class="leipzig"><a href="http://www.uni-leipzig.de/unigeschichte/professorenkatalog/leipzig/Eickstedt_604/">ja</a></td>
+                                <td class="mainz"><a href="http://gutenberg-biographics.ub.uni-mainz.de/id/eae1021e-7b6f-4993-a767-45f8dfeae9d6">ja</a></td>
+                                <td class="rostock"><a href="http://cpr.uni-rostock.de/metadata/cpr_person_00003399">ja</a></td>
+                            </tr>
+                            <tr>
                                 <th class="api"><a href="https://de.wikipedia.org/wiki/Wikipedia:BEACON">GND BEACON</a></th>
                                 <td class="halle"><a href="http://www.historische-kommission-muenchen-editionen.de/beacond/cph.php?beacon">(ja)</a></td>
                                 <td class="helmstedt"><a href="http://uni-helmstedt.hab.de/beacon.php">ja</a></td>
@@ -129,76 +172,94 @@
                                 <td class="rostock"><a href="http://cpr.uni-rostock.de/cpr_pnd_beacon.txt">ja</a></td>
                             </tr>
                             <tr>
-                                <th class="api"><a href="https://de.wikipedia.org/wiki/Identifikator#Persistenz">PID/Permalink</a></th>
-                                <td class="halle"></td>
-                                <td class="helmstedt"></td>
-                                <td class="kiel"><a href="http://gelehrtenverzeichnis.de/e3ef2ef9-2424-c175-bc4f-4d4c606410fa">ja</a></td>
-                                <td class="leipzig"></td>
-                                <td class="mainz"><a href="http://gutenberg-biographics.ub.uni-mainz.de/id/a85352e5-1ead-4a6f-8e27-276f94cd2867">ja</a></td>
-                                <td class="rostock"></td>
+                                <td class="category" colspan="7">Offene Schnittstellen</td>
                             </tr>
                             <tr>
-                                <th class="api"><a href="http://webdoc.sub.gwdg.de/pub/mon/dariah-de/dwp-2014-6.pdf">Forschungsdatenlizenz</a></th>
-                                <td class="halle"></td>
-                                <td class="helmstedt"></td>
+                                <th class="api"><a href="https://de.wikipedia.org/wiki/Representational_State_Transfer">RESTful API</a></th>
+                                <td class="halle">-</td>
+                                <td class="helmstedt">-</td>
                                 <td class="kiel">-</td>
-                                <td class="leipzig"></td>
-                                <td class="mainz"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
-                                <td class="rostock"></td>
-                            </tr>
-                            <tr>
-                                <th class="api"><a href="http://www.tei-c.org/index.xml">TEI/XML</a></th>
-                                <td class="halle"></td>
-                                <td class="helmstedt"></td>
-                                <td class="kiel"></td>
-                                <td class="leipzig"></td>
-                                <td class="mainz"></td>
-                                <td class="rostock"></td>
+                                <td class="leipzig">-</td>
+                                <td class="mainz">-</td>
+                                <td class="rostock">-</td>
                             </tr>
                             <tr>
                                 <th class="api"><a href="https://www.openarchives.org/pmh/">OAI-PMH</a></th>
-                                <td class="halle"></td>
-                                <td class="helmstedt"></td>
-                                <td class="kiel"></td>
-                                <td class="leipzig"></td>
-                                <td class="mainz"></td>
-                                <td class="rostock"></td>
+                                <td class="halle">-</td>
+                                <td class="helmstedt">-</td>
+                                <td class="kiel">-</td>
+                                <td class="leipzig">-</td>
+                                <td class="mainz">-</td>
+                                <td class="rostock">-</td>
                             </tr>
                             <tr>
-                                <th class="api"><a href="https://de.wikipedia.org/wiki/Search/Retrieve_via_URL">SRU</a></th>
-                                <td class="halle"></td>
-                                <td class="helmstedt"></td>
-                                <td class="kiel"></td>
-                                <td class="leipzig"></td>
-                                <td class="mainz"></td>
-                                <td class="rostock"></td>
+                                <th class="api"><a href="http://www.loc.gov/standards/sru/">SRU</a></th>
+                                <td class="halle">-</td>
+                                <td class="helmstedt">-</td>
+                                <td class="kiel">-</td>
+                                <td class="leipzig">-</td>
+                                <td class="mainz">-</td>
+                                <td class="rostock">-</td>
                             </tr>
                             <tr>
                                 <th class="api"><a href="http://www.opensearch.org/Home">Open Search</a></th>
-                                <td class="halle"></td>
-                                <td class="helmstedt"></td>
-                                <td class="kiel"></td>
-                                <td class="leipzig"></td>
-                                <td class="mainz"></td>
-                                <td class="rostock"></td>
+                                <td class="halle">-</td>
+                                <td class="helmstedt">-</td>
+                                <td class="kiel">-</td>
+                                <td class="leipzig">-</td>
+                                <td class="mainz">-</td>
+                                <td class="rostock">-</td>
+                            </tr>
+                            <tr>
+                                <th class="api"><a href="https://de.wikipedia.org/wiki/SPARQL">SPARQL Endpoint</a></th>
+                                <td class="halle">-</td>
+                                <td class="helmstedt">-</td>
+                                <td class="kiel">-</td>
+                                <td class="leipzig"><a href="http://catalogus-professorum.org/sparql/">(ja</a> / <a href="http://catalogus-professorum.org/view/r/Eickstedt_604">Bsp.)</a></td>
+                                <td class="mainz">-</td>
+                                <td class="rostock">-</td>
+                            </tr>
+                            <tr>
+                                <td class="category" colspan="7">Austauschformate</td>
+                            </tr>
+                            <tr>
+                                <th class="api"><a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDPERS">TEI/XML</a></th>
+                                <td class="halle">-</td>
+                                <td class="helmstedt">-</td>
+                                <td class="kiel">-</td>
+                                <td class="leipzig">-</td>
+                                <td class="mainz">-</td>
+                                <td class="rostock">-</td>
                             </tr>
                             <tr>
                                 <th class="api"><a href="http://schema.org/">schema.org</a></th>
-                                <td class="halle"></td>
-                                <td class="helmstedt"></td>
+                                <td class="halle">-</td>
+                                <td class="helmstedt">-</td>
                                 <td class="kiel">(ja)</td>
-                                <td class="leipzig"></td>
-                                <td class="mainz"></td>
-                                <td class="rostock"></td>
+                                <td class="leipzig">-</td>
+                                <td class="mainz">-</td>
+                                <td class="rostock">-</td>
                             </tr>
                             <tr>
-                                <th class="api"><a href="https://de.wikipedia.org/wiki/Linked_Open_Data">LOD</a></th>
-                                <td class="halle"></td>
-                                <td class="helmstedt"></td>
+                                <th class="api"><a href="https://de.wikipedia.org/wiki/Linked_Open_Data">LOD/RDF</a></th>
+                                <td class="halle">-</td>
+                                <td class="helmstedt">-</td>
                                 <td class="kiel"><a href="http://www.gelehrtenverzeichnis.de/data/about/e3ef2ef9-2424-c175-bc4f-4d4c606410fa">ja</a></td>
-                                <td class="leipzig"></td>
-                                <td class="mainz"></td>
-                                <td class="rostock"></td>
+                                <td class="leipzig"><a href="http://www.uni-leipzig.de/unigeschichte/professorenkatalog/leipzig/Eickstedt_604.rdf">ja</a></td>
+                                <td class="mainz">-</td>
+                                <td class="rostock">-</td>
+                            </tr>
+                            <tr>
+                                <td class="category" colspan="7">Nachnutzung</td>
+                            </tr>
+                            <tr>
+                                <th class="api"><a href="http://webdoc.sub.gwdg.de/pub/mon/dariah-de/dwp-2014-6.pdf">Forschungsdatenlizenz</a></th>
+                                <td class="halle">-</td>
+                                <td class="helmstedt">-</td>
+                                <td class="kiel">-</td>
+                                <td class="leipzig">-</td>
+                                <td class="mainz"><a href="https://creativecommons.org/licenses/by/4.0/">CC-BY</a></td>
+                                <td class="rostock">-</td>
                             </tr>
                         </tbody>
                     </table>
@@ -209,7 +270,7 @@
         <div class="step">
             <div class="centered">
                 <h1>F I N I S</h1>
-                <h2>Thank you</h2>
+                <h2>Danke für Ihre Aufmerksamkeit</h2>
             </div>
         </div>
 
