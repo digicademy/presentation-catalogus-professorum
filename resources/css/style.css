@@ -435,3 +435,14 @@ STYLES FOR SPECIFIC SLIDES
 	font-weight: bold;
 	padding-left: 8px;
 }
+
+.indexfinger {
+	position: relative;
+	font-size: 35px;
+	line-height: 1;
+	margin: 0;
+	padding: 0;
+	left: 5px;
+	top: 5px;
+	color: #333;
+}
