@@ -1,15 +1,15 @@
-### Date | Place
+### 12.07.2016 | Universität Mainz
 
-# Title
+# Deutsche Professorenkataloge
 
-## Subtitle
+## Perspektiven, Potentiale und Möglichkeiten zur Interoperabilität
 
-### Author
+### Torsten Schrade
 
-Description
+Presentation for the catalogus professorum expert workshop 2016 at the university of Mainz
 
-The code of this boilerplate is at https://github.com/digicademy/impress-js-boilerplate
+The data of this presentation can be found at https://github.com/digicademy/presentation-catalogus-professorum
 
-A live demo can be found at http://digicademy.github.io/impress-js-boilerplate/
+The online version of this presentation can be found at http://digicademy.github.io/presentation-catalogus-professorum
 
-Released under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), @digicademy
+Released under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), Torsten Schrade

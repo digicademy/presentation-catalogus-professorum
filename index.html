@@ -34,6 +34,7 @@
 
     <!-- highlight.js -->
     <link rel="stylesheet" href="vendor/highlight/styles/default.css" />
+    <link rel="stylesheet" href="resources/css/hljs.linenumbering.css" />
 
     <!-- magnific popup -->
     <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup-1.1.0.css" />
@@ -65,7 +66,7 @@
     <div id="impress">
 
         <div class="step">
-            <h4>12.07.2016 | Universität Mainz | Expertenworkshop</h4>
+            <h4>12.07.2016 | Universität Mainz | Expertenworkshop Professorenkataloge</h4>
 
             <h1>Deutsche Professorenkataloge</h1>
 
@@ -123,9 +124,19 @@
             <h2>Definition</h2>
             <div class="row">
                 <div class="twelfe columns">
-                    <a href="http://nbn-resolving.de/urn:nbn:de:gbv:7-dariah-2014-1-0">
-                        Beer u.a.: Interdisciplinary Interoperability. DARIAH-DE Working Papers Nr. 3. Göttingen: DARIAH-DE, 2014. URN: urn:nbn:de:gbv:7-dariah-2014-1-0.
-                    </a>
+                    <blockquote>
+                        Interoperability can be defined [...] as <strong>the 'ability of multiple systems
+                        with different hardware and software platforms, data structures, and interfaces to
+                        exchange data with minimal loss of content and functionality' </strong> (NISO 2004) [...].
+                        Interoperability touches different levels of exchange. The most basic of these is the
+                        technical or system level, dealing with interoperability of hardware, communication
+                        interfaces and software platforms.
+                    </blockquote>
+                    <p class="small">
+                        <a href="http://nbn-resolving.de/urn:nbn:de:gbv:7-dariah-2014-1-0">
+                            Beer u.a.: Interdisciplinary Interoperability. DARIAH-DE Working Papers Nr. 3. Göttingen: DARIAH-DE, 2014.<br/> URN: urn:nbn:de:gbv:7-dariah-2014-1-0, S. 5.
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -297,6 +308,11 @@
                 </div>
                 <div class="six columns">
                     <h4>Beispiel</h4>
+                    <div class="mfp-lightbox center">
+                        <a href="resources/img/example_sparql.png">
+                            <img src="resources/img/example_sparql.png" width="60%" />
+                        </a>
+                    </div>
                     <h4>Potentiale</h4>
                     <ul class="small">
                         <li>Föderierte semantische Anfragen auf verteilte Datenbestände</li>
@@ -313,14 +329,47 @@
             <div class="row">
                 <div class="six columns">
                     <h4>Konzept</h4>
+<pre>
+<code class="xml small linenumbers">&lt;person xml:id="WM"&gt;
+    &lt;event type="marriage" when="1859-04-26"&gt;
+        &lt;label&gt;Marriage&lt;/label&gt;
+        &lt;desc&gt;
+            &lt;name type="person" ref="#WM"&gt;William Morris&lt;/name&gt; and &lt;name type="person" ref="http://en.wikipedia.org/wiki/Jane_Burden"&gt;Jane Burden&lt;/name&gt; were
+            married at &lt;name type="place"&gt;St Michael's Church, Ship Street, Oxford&lt;/name&gt; on
+            &lt;date when="1859-04-26"&gt;26 April 1859&lt;/date&gt;. The wedding was
+            conducted by Morris's friend &lt;name type="person" ref="#RWD"&gt;R. W.
+            Dixon&lt;/name&gt; with &lt;name type="person" ref="#CBF"&gt;Charles
+            Faulkner&lt;/name&gt; as the best man. The bride was given away by her father,
+            &lt;name type="person" ref="#RB"&gt;Robert Burden&lt;/name&gt;.
+            According to the account that &lt;name type="person" ref="http://en.wikipedia.org/wiki/Edward_Burne-Jones"&gt;Burne-Jones&lt;/name&gt;
+            gave &lt;name type="person" ref="#JWM"&gt;Mackail&lt;/name&gt;
+            &lt;quote&gt;M. said to Dixon beforehand &lt;said&gt;Mind you don't call her Mary&lt;/said&gt;
+            but he did&lt;/quote&gt;. The entry in the
+            Register reads: &lt;quote&gt;William Morris, 25, Bachelor Gentleman, 13
+            George Street, son of William Morris decd. Gentleman. Jane Burden,
+            minor, spinster, 65 Holywell Street, d. of Robert Burden,
+            Groom.&lt;/quote&gt; The witnesses were Jane's parents and Faulkner. None of
+            Morris's family attended the ceremony. Morris presented Jane with a
+            plain gold ring bearing the London hallmark for 1858. She gave her
+            husband a double-handled antique silver cup.&lt;/desc&gt;
+        &lt;bibl&gt;J. W. Mackail, &lt;title&gt;The Life of William Morris&lt;/title&gt;, 1899.&lt;/bibl&gt;
+    &lt;/event&gt;
+&lt;/person&gt;
+</code>
+</pre>
                 </div>
                 <div class="six columns">
-                    <h4>Beispiel</h4>
+                    <h4>Weitere Informationen</h4>
+                    <ul class="small">
+                        <li>
+                            <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDPERS">TEI P5 Spezifiktation</a>
+                        </li>
+                    </ul>
                     <h4>Potentiale</h4>
                     <ul class="small">
-                        <li>Eins</li>
-                        <li>Zwei</li>
-                        <li>Drei</li>
+                        <li>Über die Disziplinen hinweg anerkanntes Austauschformat zur Textkodierung</li>
+                        <li>Geeignet für eine nachhaltige maschinenlesbare Datenarchivierung</li>
+                        <li>Könnte ggf. auch in externe Angebote eingespeist werden (bspw. in die Deutsche Biographie oder das Biographie-Portal EU)</li>
                     </ul>
                 </div>
             </div>
@@ -331,15 +380,42 @@
             <h3 class="pull-up red">schema.org</h3>
             <div class="row">
                 <div class="six columns">
-                    <h4>Konzept</h4>
+                    <h4>Konzept (als RDFa)</h4>
+<pre>
+<code class="xml small linenumbers" style="line-height: 1.5">&lt;div vocab="http://schema.org/" typeof="Person"&gt;
+    &lt;span property="name"&gt;Jane Doe&lt;/span&gt;
+    &lt;img src="janedoe.jpg" property="image" alt="Photo of Jane Joe"/&gt;
+    &lt;span property="jobTitle"&gt;Professor&lt;/span&gt;
+    &lt;div property="address" typeof="PostalAddress"&gt;
+        &lt;span property="streetAddress"&gt;
+            20341 Whitworth Institute
+            405 N. Whitworth
+        &lt;/span&gt;
+        &lt;span property="addressLocality"&gt;Seattle&lt;/span&gt;,
+        &lt;span property="addressRegion"&gt;WA&lt;/span&gt;
+        &lt;span property="postalCode"&gt;98052&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;span property="telephone"&gt;(425) 123-4567&lt;/span&gt;
+    &lt;a href="mailto:jane-doe@xyz.edu" property="email"&gt;
+        jane-doe@xyz.edu&lt;/a&gt;
+    Jane's home page:
+    &lt;a href="http://www.janedoe.com" property="url"&gt;janedoe.com&lt;/a&gt;
+    Graduate students:
+    &lt;a href="http://www.xyz.edu/students/alicejones.html" property="colleague"&gt;
+        Alice Jones&lt;/a&gt;
+    &lt;a href="http://www.xyz.edu/students/bobsmith.html" property="colleague"&gt;
+        Bob Smith&lt;/a&gt;
+&lt;/div&gt;
+</code>
+</pre>
                 </div>
                 <div class="six columns">
                     <h4>Beispiel</h4>
                     <h4>Potentiale</h4>
                     <ul class="small">
-                        <li>Eins</li>
-                        <li>Zwei</li>
-                        <li>Drei</li>
+                        <li>Einfach umzusetzende maschinenlesbare Datenanreicherung</li>
+                        <li>Daten können direkt aus den HTML-Frontends abgegriffen und umgewandelt (bspw. in JSON-LD) werden</li>
+                        <li>Steigert gleichzeitig die Suchmaschinenoptimierung der Kataloge</li>
                     </ul>
                 </div>
             </div>
@@ -351,14 +427,47 @@
             <div class="row">
                 <div class="six columns">
                     <h4>Konzept</h4>
+<pre>
+<code class="xml small linenumbers" style="line-height: 1.5">&lt;rdf:RDF
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:j.0="http://gelehrtenverzeichnis.de/"
+        xmlns:owl="http://www.w3.org/2002/07/owl#"
+        xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"&gt;
+    &lt;owl:Thing rdf:nodeID="A0"&gt;
+        &lt;owl:sameAs rdf:nodeID="A0"/&gt;
+        &lt;j.0:organization rdf:resource="http://gelehrtenverzeichnis.de/3c48a25d-902b-4822-afbe-bd3e6c7b524a"/&gt;
+        &lt;j.0:typeRaw&gt;Mitglied&lt;/j.0:typeRaw&gt;
+        &lt;rdf:type rdf:resource="http://gelehrtenverzeichnis.de/Tribute"/&gt;
+    &lt;/owl:Thing&gt;
+    &lt;owl:Thing rdf:nodeID="A1"&gt;
+        &lt;owl:sameAs rdf:nodeID="A1"/&gt;
+        &lt;j.0:organization rdf:resource="http://gelehrtenverzeichnis.de/587da20c-c381-4415-a921-8b5e155f895f"/&gt;
+        &lt;j.0:typeRaw&gt;Mitglied&lt;/j.0:typeRaw&gt;
+        &lt;rdf:type rdf:resource="http://gelehrtenverzeichnis.de/Tribute"/&gt;
+    &lt;/owl:Thing&gt;
+    &lt;owl:Thing rdf:nodeID="A2"&gt;
+        &lt;owl:sameAs rdf:nodeID="A2"/&gt;
+        &lt;j.0:organization rdf:resource="http://gelehrtenverzeichnis.de/4774897a-2e9c-41df-a0bf-f0941f18ef6d"/&gt;
+        &lt;j.0:typeRaw&gt;Mitglied&lt;/j.0:typeRaw&gt;
+        &lt;rdf:type rdf:resource="http://gelehrtenverzeichnis.de/Tribute"/&gt;
+    &lt;/owl:Thing&gt;
+    [...]
+&lt;/rdf:RDF&gt;
+</code>
+</pre>
                 </div>
                 <div class="six columns">
                     <h4>Beispiel</h4>
+                    <div class="mfp-lightbox center">
+                        <a href="resources/img/example_rdf.png">
+                            <img src="resources/img/example_rdf.png" width="60%" />
+                        </a>
+                    </div>
                     <h4>Potentiale</h4>
                     <ul class="small">
-                        <li>Eins</li>
-                        <li>Zwei</li>
-                        <li>Drei</li>
+                        <li>Einheitliche Erschließung der Daten mittels übergreifender Ontologien</li>
+                        <li>Standardisierte Semantik für alle Kataloge (Personen-Entitäten, Ereignisse, Beziehungen...)</li>
+                        <li>Möglichkeit zu übergreifenden Schlussfolgerungen (Reasoning) auf den Daten (bspw. nach akademischen Karrierewegen in bestimmten Jahrzehnten in Bezug zu Parteizugehörigkeiten)</li>
                     </ul>
                 </div>
             </div>
@@ -545,6 +654,17 @@
             <h2>Fazit</h2>
             <div class="row">
                 <div class="twelfe columns">
+                    <ul>
+                        <li>
+                            Eins
+                        </li>
+                        <li class="substep">
+                            Zwei
+                        </li>
+                        <li class="substep">
+                            Drei
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -605,6 +725,9 @@
 
     <!-- js libs -->
 
+    <!-- jquery -->
+    <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
+
     <!-- chartist -->
     <script src="vendor/chartist/chartist.min-0.9.7.js"></script>
 
@@ -615,9 +738,7 @@
     <!-- highlight -->
     <script src="vendor/highlight/highlight.pack-9.3.0.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-
-    <!-- jquery -->
-    <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
+    <script src="resources/js/hljs.linenumbering.js"></script>
 
     <!-- magnific popup -->
     <script src="vendor/magnific-popup/jquery.magnific-popup.min-1.1.0.js"></script>

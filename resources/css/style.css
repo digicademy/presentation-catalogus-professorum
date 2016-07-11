@@ -446,3 +446,12 @@ STYLES FOR SPECIFIC SLIDES
 	top: 5px;
 	color: #333;
 }
+
+code.xml {
+	font-size: 12px;
+	line-height: 1.5;
+}
+
+blockquote strong {
+	display: inline;
+}
