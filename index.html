@@ -225,6 +225,12 @@
                 </div>
                 <div class="six columns">
                     <h4>Beispiel</h4>
+                    <div class="mfp-lightbox center">
+                        <a href="resources/img/example_rest.png">
+                            <img src="resources/img/example_rest.png" width="80%" />
+                        </a>
+                    </div>
+                    <p><a href="http://gutenberg-biographics.ub.uni-mainz.de/api/items/persons">REST-Schnittstelle von Gutenberg Biographics</a></p>
                     <h4>Potentiale</h4>
                     <ul class="small">
                         <li>Maschinenlesbarer Zugang zu den Forschungsdaten</li>
@@ -283,7 +289,21 @@
                     </div>
                 </div>
                 <div class="six columns">
-                    <h4>Beispiel</h4>
+                    <h4>Beispiele</h4>
+                    <div class="mfp-lightbox center">
+                        <a href="resources/img/example_opensearch_03.png">
+                            <img src="resources/img/example_opensearch_03.png" width="30%" />
+                        </a>
+                        <a href="resources/img/example_opensearch_02.png">
+                            <img src="resources/img/example_opensearch_02.png" width="30%" />
+                        </a>
+                        <a href="resources/img/example_opensearch_01.png">
+                            <img src="resources/img/example_opensearch_01.png" width="30%" />
+                        </a>
+                    </div>
+                    <p>
+                        Suchbegriff "Kiel": <a href="http://gutenberg-biographics.ub.uni-mainz.local/opensearch/persons/search?q=kiel">Demo</a> | <a href="http://gutenberg-biographics.ub.uni-mainz.local/opensearch/persons/">OpenSearch Description</a>
+                    </p>
                     <h4>Potentiale</h4>
                     <ul class="small">
                         <li>Transparente (maschinenlesbare) Suchfunktionalität zwischen Katalogen</li>
@@ -324,52 +344,57 @@
         </div>
 
         <div class="step">
-            <h2>Austauschformate (1)</h2>
+            <h2 class="push-down">Austauschformate (1)</h2>
             <h3 class="pull-up red">TEI/XML</h3>
             <div class="row">
                 <div class="six columns">
-                    <h4>Konzept</h4>
-<pre>
-<code class="xml small linenumbers">&lt;person xml:id="WM"&gt;
-    &lt;event type="marriage" when="1859-04-26"&gt;
-        &lt;label&gt;Marriage&lt;/label&gt;
-        &lt;desc&gt;
-            &lt;name type="person" ref="#WM"&gt;William Morris&lt;/name&gt; and &lt;name type="person" ref="http://en.wikipedia.org/wiki/Jane_Burden"&gt;Jane Burden&lt;/name&gt; were
-            married at &lt;name type="place"&gt;St Michael's Church, Ship Street, Oxford&lt;/name&gt; on
-            &lt;date when="1859-04-26"&gt;26 April 1859&lt;/date&gt;. The wedding was
-            conducted by Morris's friend &lt;name type="person" ref="#RWD"&gt;R. W.
-            Dixon&lt;/name&gt; with &lt;name type="person" ref="#CBF"&gt;Charles
-            Faulkner&lt;/name&gt; as the best man. The bride was given away by her father,
-            &lt;name type="person" ref="#RB"&gt;Robert Burden&lt;/name&gt;.
-            According to the account that &lt;name type="person" ref="http://en.wikipedia.org/wiki/Edward_Burne-Jones"&gt;Burne-Jones&lt;/name&gt;
-            gave &lt;name type="person" ref="#JWM"&gt;Mackail&lt;/name&gt;
-            &lt;quote&gt;M. said to Dixon beforehand &lt;said&gt;Mind you don't call her Mary&lt;/said&gt;
-            but he did&lt;/quote&gt;. The entry in the
-            Register reads: &lt;quote&gt;William Morris, 25, Bachelor Gentleman, 13
-            George Street, son of William Morris decd. Gentleman. Jane Burden,
-            minor, spinster, 65 Holywell Street, d. of Robert Burden,
-            Groom.&lt;/quote&gt; The witnesses were Jane's parents and Faulkner. None of
-            Morris's family attended the ceremony. Morris presented Jane with a
-            plain gold ring bearing the London hallmark for 1858. She gave her
-            husband a double-handled antique silver cup.&lt;/desc&gt;
-        &lt;bibl&gt;J. W. Mackail, &lt;title&gt;The Life of William Morris&lt;/title&gt;, 1899.&lt;/bibl&gt;
-    &lt;/event&gt;
+                    <h4 class="pull-up">Konzept</h4>
+<pre class="pull-up">
+<code class="xml small linenumbers">&lt;person xmlns="http://www.tei-c.org/ns/1.0" xml:id="f313f057-af4d-46bd-9227-bfeac84e19cc"&gt;
+    &lt;persName&gt;
+        &lt;roleName type="honorific" full="abb"&gt;Prof. Dr. rer. nat.&lt;/roleName&gt;
+        &lt;forename&gt;Karl&lt;/forename&gt;
+        &lt;surname&gt;Bechert&lt;/surname&gt;
+        &lt;reg&gt;Bechert, Karl&lt;/reg&gt;
+    &lt;/persName&gt;
+    &lt;sex value="1"&gt;male&lt;/sex&gt;
+    &lt;birth when="1901-08-23"&gt;
+        &lt;date&gt;23.08.1901&lt;/date&gt;
+        &lt;placeName&gt;Nürnberg&lt;/placeName&gt;
+    &lt;/birth&gt;
+    &lt;death when="1981-04-01"&gt;
+        &lt;date&gt;01.04.1981&lt;/date&gt;
+        &lt;placeName&gt;Weilmünster-Möttau&lt;/placeName&gt;
+    &lt;/death&gt;
+    &lt;faith&gt;1&lt;/faith&gt;
+    [...]
+    &lt;listEvent&gt;
+        &lt;event role="Student" from="1919-01-01" to="1925-12-31"&gt;
+            &lt;label&gt;Studium&lt;/label&gt;
+            &lt;note&gt;
+                &lt;orgName&gt;Universität München&lt;/orgName&gt;
+                &lt;note&gt;Fächer: Physik, Mathematik, Chemie&lt;/note&gt;
+            &lt;/note&gt;
+        &lt;/event&gt;
+    &lt;/listEvent&gt;
+    [...]
 &lt;/person&gt;
 </code>
 </pre>
                 </div>
                 <div class="six columns">
-                    <h4>Weitere Informationen</h4>
-                    <ul class="small">
-                        <li>
-                            <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDPERS">TEI P5 Spezifiktation</a>
-                        </li>
-                    </ul>
+                    <h4 class="pull-up">Beispiel</h4>
+                    <div class="mfp-lightbox center">
+                        <a href="resources/img/example_tei.png">
+                            <img src="resources/img/example_tei.png" width="60%" />
+                        </a>
+                    </div>
+                    <p>Beispiel <a href="http://gutenberg-biographics.ub.uni-mainz.de/api/items/persons/f313f057-af4d-46bd-9227-bfeac84e19cc">Karl Bechert (TEI/XML)</a> | <a href="http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html#NDPERS">TEI P5 Spezifiktation</a></p>
                     <h4>Potentiale</h4>
                     <ul class="small">
                         <li>Über die Disziplinen hinweg anerkanntes Austauschformat zur Textkodierung</li>
                         <li>Geeignet für eine nachhaltige maschinenlesbare Datenarchivierung</li>
-                        <li>Könnte ggf. auch in externe Angebote eingespeist werden (bspw. in die Deutsche Biographie oder das Biographie-Portal EU)</li>
+                        <li>Könnte ggf. auch in externe Angebote eingespeist werden (bspw. in die <a href="https://www.deutsche-biographie.de/">Deutsche Biographie</a> oder das <a href="http://www.biographie-portal.eu/">Biographie-Portal EU)</a></li>
                     </ul>
                 </div>
             </div>
@@ -382,35 +407,45 @@
                 <div class="six columns">
                     <h4>Konzept (als RDFa)</h4>
 <pre>
-<code class="xml small linenumbers" style="line-height: 1.5">&lt;div vocab="http://schema.org/" typeof="Person"&gt;
-    &lt;span property="name"&gt;Jane Doe&lt;/span&gt;
-    &lt;img src="janedoe.jpg" property="image" alt="Photo of Jane Joe"/&gt;
-    &lt;span property="jobTitle"&gt;Professor&lt;/span&gt;
-    &lt;div property="address" typeof="PostalAddress"&gt;
-        &lt;span property="streetAddress"&gt;
-            20341 Whitworth Institute
-            405 N. Whitworth
-        &lt;/span&gt;
-        &lt;span property="addressLocality"&gt;Seattle&lt;/span&gt;,
-        &lt;span property="addressRegion"&gt;WA&lt;/span&gt;
-        &lt;span property="postalCode"&gt;98052&lt;/span&gt;
-    &lt;/div&gt;
-    &lt;span property="telephone"&gt;(425) 123-4567&lt;/span&gt;
-    &lt;a href="mailto:jane-doe@xyz.edu" property="email"&gt;
-        jane-doe@xyz.edu&lt;/a&gt;
-    Jane's home page:
-    &lt;a href="http://www.janedoe.com" property="url"&gt;janedoe.com&lt;/a&gt;
-    Graduate students:
-    &lt;a href="http://www.xyz.edu/students/alicejones.html" property="colleague"&gt;
-        Alice Jones&lt;/a&gt;
-    &lt;a href="http://www.xyz.edu/students/bobsmith.html" property="colleague"&gt;
-        Bob Smith&lt;/a&gt;
+<code class="xml small linenumbers" style="line-height: 1.5">&lt;div <span class="highlight">typeof="Person" vocab="http://schema.org/"</span> class="row"&gt;
+    &lt;h1&gt;&lt;span class="given-name" <span class="highlight">property="givenName"</span>&gt;Karl &lt;/span&gt;
+        &lt;span class="family-name" <span class="highlight">property="familyName"</span>&gt;Bechert&lt;/span&gt;
+    &lt;/h1&gt;
+    &lt;p&gt;Geb. &lt;time datetime="1901-08-23" <span class="highlight">property="birthDate"</span>&gt;23.08.1901&lt;/time&gt;
+       in &lt;span <span class="highlight">typeof="Place" property="birthPlace"</span>&gt;Nürnberg&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;p&gt;Gest. &lt;time datetime="1981-04-01" <span class="highlight">property="deathDate"</span>&gt;01.04.1981&lt;/time&gt;
+       in &lt;span <span class="highlight">typeof="Place" property="deathPlace"</span>&gt;Weilmünster-Möttau&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;p&gt;&lt;span class="gnd"&gt;GND:
+    &lt;a href="http://d-nb.info/gnd/119127059" <span class="highlight">property="sameAs"</span>&gt;119127059&lt;/a&gt;;
+    VIAF: &lt;a href="http://viaf.org/viaf/32323656" <span class="highlight">property="sameAs"</span>&gt;32323656&lt;/a&gt;&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;ul&gt;
+        &lt;li <span class="highlight">property="performerIn" typeof="Event"</span>&gt;
+            &lt;span <span class="highlight">property="name"</span>&gt;
+                &lt;time <span class="highlight">property="startDate" datetime="1946-01-01"</span> class="skip"&gt;1946-01-01&lt;/time&gt;
+                &lt;time <span class="highlight">property="endDate" datetime="1969-12-31"</span> class="skip"&gt;1969-12-31&lt;/time&gt;
+                1946-1969, Professor für Theoretische Physik, Naturwissenschaftliche Fakultät
+            &lt;/span&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+    [...]
 &lt;/div&gt;
 </code>
 </pre>
                 </div>
                 <div class="six columns">
                     <h4>Beispiel</h4>
+                    <div class="mfp-lightbox center">
+                        <a href="resources/img/example_schemaorg.png">
+                            <img src="resources/img/example_schemaorg.png" width="60%" />
+                        </a>
+                    </div>
+                    <p>
+                        Google Test-Tool: <a href="https://search.google.com/structured-data/testing-tool#url=http%3A%2F%2Fgutenberg-biographics.ub.uni-mainz.de%2Fpersonen%2Fregister%2Feintrag%2Fkarl-bechert.html">Demo</a> |
+                        GetSchema.org Parser: <a href="http://getschema.org/rdfaliteextractor?url=http%3A%2F%2Fgutenberg-biographics.ub.uni-mainz.de%2Fpersonen%2Fregister%2Feintrag%2Fkarl-bechert.html&out=rdf">Demo</a>
+                    </p>
                     <h4>Potentiale</h4>
                     <ul class="small">
                         <li>Einfach umzusetzende maschinenlesbare Datenanreicherung</li>
@@ -555,7 +590,7 @@
                                 <td class="rostock"><a href="http://cpr.uni-rostock.de/cpr_pnd_beacon.txt">ja</a></td>
                             </tr>
                             <tr>
-                                <td class="category" colspan="7">Offene Schnittstellen</td>
+                                <td class="category" colspan="7">(Nach außen) Offene Schnittstellen</td>
                             </tr>
                             <tr>
                                 <th class="api"><a href="https://de.wikipedia.org/wiki/Representational_State_Transfer">RESTful API</a></th>
@@ -563,8 +598,8 @@
                                 <td class="helmstedt">-</td>
                                 <td class="kiel">-</td>
                                 <td class="leipzig">-</td>
-                                <td class="mainz">-</td>
-                                <td class="rostock">-</td>
+                                <td class="mainz"><a href="http://gutenberg-biographics.ub.uni-mainz.de/api/items/persons">ja</a></td>
+                                <td class="rostock">(ja)</td>
                             </tr>
                             <tr>
                                 <th class="api"><a href="https://www.openarchives.org/pmh/">OAI-PMH</a></th>
@@ -573,7 +608,7 @@
                                 <td class="kiel">-</td>
                                 <td class="leipzig">-</td>
                                 <td class="mainz">-</td>
-                                <td class="rostock">-</td>
+                                <td class="rostock">(ja)</td>
                             </tr>
                             <tr>
                                 <th class="api"><a href="http://www.loc.gov/standards/sru/">SRU</a></th>
@@ -590,14 +625,14 @@
                                 <td class="helmstedt">-</td>
                                 <td class="kiel">-</td>
                                 <td class="leipzig">-</td>
-                                <td class="mainz">-</td>
+                                <td class="mainz"><a href="http://gutenberg-biographics.ub.uni-mainz.de/opensearch/persons/">ja</a></td>
                                 <td class="rostock">-</td>
                             </tr>
                             <tr>
                                 <th class="api"><a href="https://de.wikipedia.org/wiki/SPARQL">SPARQL Endpoint</a></th>
                                 <td class="halle">-</td>
                                 <td class="helmstedt">-</td>
-                                <td class="kiel">-</td>
+                                <td class="kiel">(ja)</td>
                                 <td class="leipzig"><a href="http://catalogus-professorum.org/sparql/">(ja</a> / <a href="http://catalogus-professorum.org/view/r/Eickstedt_604">Bsp.)</a></td>
                                 <td class="mainz">-</td>
                                 <td class="rostock">-</td>
@@ -611,7 +646,7 @@
                                 <td class="helmstedt">-</td>
                                 <td class="kiel">-</td>
                                 <td class="leipzig">-</td>
-                                <td class="mainz">-</td>
+                                <td class="mainz"><a href="http://gutenberg-biographics.ub.uni-mainz.de/api/items/persons/f313f057-af4d-46bd-9227-bfeac84e19cc">ja</a></td>
                                 <td class="rostock">-</td>
                             </tr>
                             <tr>
@@ -620,7 +655,7 @@
                                 <td class="helmstedt">-</td>
                                 <td class="kiel">(ja)</td>
                                 <td class="leipzig">-</td>
-                                <td class="mainz">-</td>
+                                <td class="mainz"><a href="https://search.google.com/structured-data/testing-tool#url=http%3A%2F%2Fgutenberg-biographics.ub.uni-mainz.de%2Fpersonen%2Fregister%2Feintrag%2Fkarl-bechert.html">ja</a></td>
                                 <td class="rostock">-</td>
                             </tr>
                             <tr>

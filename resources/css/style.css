@@ -405,6 +405,10 @@ CLASSES FOR SPECIAL LAYOUT/TYPOGRAPHY
 	margin: 0;
 }
 
+.highlight {
+	background: #F6E900;
+}
+
 /*
 #########################################################
 STYLES FOR INCLUDED LIBRARIES
